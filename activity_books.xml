@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.android.book_store.books">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="795dp"
+            android:background="@drawable/bg" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp">
+
+            <ImageButton
+                android:id="@+id/ordernow"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:src="@drawable/ologo2"
+                android:background="@android:color/transparent"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:id="@+id/ordermsg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/ordernow"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="13dp"
+                android:text="Your books are waiting to be departed."
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/ordermsg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/ordernow"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="25dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="11dp"
+                android:text="Order now. Use BAA67 to avail 10% special discount"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/applogo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/be_logo"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/welcomemsg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/applogo"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@android:color/darker_gray"
+                android:visibility="visible"
+                android:textSize="17dp"
+                android:text="WELCOME TO THE FAAMILY OF BOOK EXPRESS"/>
+        </RelativeLayout>
+
+
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="80dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:padding="15dp"
+            android:rowCount="3">
+
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp"
+                android:layout_marginBottom="8dp"
+                card_view:cardCornerRadius="4dp"
+                android:background="@android:color/transparent"
+                card_view:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray"
+                    android:clipChildren="false">
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="150dp"
+                        android:layout_height="145dp"
+                        android:background="@drawable/book1" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@android:color/white"/>
+                    <TextView
+
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text=""
+                        android:visibility="invisible"
+                        android:textSize="15sp"
+                        android:layout_marginTop="1dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/rounded_textview"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:id="@+id/count1" />
+
+
+                    <TextView
+                        android:id="@+id/book1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img1"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/darker_gray"
+                        android:text="Da Vinci code"
+                        android:textAlignment="center"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/t1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book1"
+                        android:layout_marginLeft="43dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@android:color/darker_gray"
+                        android:text="Price: Rs. "
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:id="@+id/price1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book1"
+                        android:layout_toRightOf="@id/t1"
+                        android:background="@android:color/darker_gray"
+                        android:text="220"
+                        android:textSize="11dp" />
+
+
+                    <Button
+                        android:id="@+id/dec1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/img1"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/plusminus"
+                        android:onClick="dec1"
+                        android:text="-"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:id="@+id/inc1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/img1"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/plusminus"
+                        android:onClick="inc1"
+                        android:text="+"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view2"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="8dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:background="@android:color/darker_gray">
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="150dp"
+                        android:layout_height="145dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/book2" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@android:color/white"/>
+                    <TextView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text=""
+                        android:textSize="15sp"
+                        android:visibility="invisible"
+                        android:layout_marginTop="0dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/rounded_textview"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:id="@+id/count2" />
+
+                    <TextView
+                        android:id="@+id/book2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img2"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/darker_gray"
+                        android:text="After the Funeral"
+                        android:textAlignment="center"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:id="@+id/t2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book2"
+                        android:layout_marginLeft="43dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@android:color/darker_gray"
+                        android:text="Price: Rs. "
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:id="@+id/price2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book2"
+                        android:layout_toRightOf="@id/t2"
+                        android:background="@android:color/darker_gray"
+                        android:text="300"
+                        android:textSize="11dp" />
+
+                    <Button
+                        android:id="@+id/dec2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/img2"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/plusminus"
+                        android:onClick="dec2"
+                        android:text="-"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="20dp"
+
+                        />
+
+                    <Button
+                        android:id="@+id/inc2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/img2"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/plusminus"
+                        android:onClick="inc2"
+                        android:text="+"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="20dp" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view3"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="15dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray">
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_width="150dp"
+                        android:layout_height="145dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/book3" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@android:color/white"/>
+                    <TextView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text=""
+                        android:visibility="invisible"
+                        android:textSize="15sp"
+                        android:layout_marginTop="0dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/rounded_textview"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:id="@+id/count3" />
+
+                    <TextView
+                        android:id="@+id/book3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img3"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/darker_gray"
+                        android:text="Captain Flint"
+                        android:textAlignment="center"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/t3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book3"
+                        android:layout_marginLeft="43dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@android:color/darker_gray"
+                        android:text="Price: Rs. "
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:id="@+id/price3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book3"
+                        android:layout_toRightOf="@id/t3"
+                        android:background="@android:color/darker_gray"
+                        android:text="190"
+                        android:textSize="11dp" />
+
+                    <Button
+                        android:id="@+id/dec3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/img3"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/plusminus"
+                        android:onClick="dec3"
+                        android:text="-"
+                        android:textSize="20dp"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/inc3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/img3"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/plusminus"
+                        android:onClick="inc3"
+                        android:text="+"
+                        android:textSize="20dp"
+                        android:textColor="@android:color/darker_gray" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view4"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="20dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray">
+
+                    <ImageView
+                        android:id="@+id/img4"
+                        android:layout_width="150dp"
+                        android:layout_height="145dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/book4" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@android:color/white"/>
+                    <TextView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text=""
+                        android:visibility="invisible"
+                        android:textSize="15sp"
+                        android:layout_marginTop="0dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/rounded_textview"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:id="@+id/count4" />
+
+                    <TextView
+                        android:id="@+id/book4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img4"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/darker_gray"
+                        android:text="Looking for Alaska"
+                        android:textAlignment="center"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/t4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book4"
+                        android:layout_marginLeft="43dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@android:color/darker_gray"
+                        android:text="Price: Rs. "
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:id="@+id/price4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book4"
+                        android:layout_toRightOf="@id/t4"
+                        android:background="@android:color/darker_gray"
+                        android:text="240"
+                        android:textSize="11dp" />
+
+                    <Button
+                        android:id="@+id/dec4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/img4"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/plusminus"
+                        android:onClick="dec4"
+                        android:text="-"
+                        android:textSize="20dp"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/inc4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/img4"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/plusminus"
+                        android:onClick="inc4"
+                        android:textSize="20dp"
+                        android:text="+"
+                        android:textColor="@android:color/darker_gray" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view5"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="15dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray">
+
+                    <ImageView
+                        android:id="@+id/img5"
+                        android:layout_width="150dp"
+                        android:layout_height="145dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/book5" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@android:color/white"/>
+                    <TextView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text=""
+                        android:visibility="invisible"
+                        android:textSize="15sp"
+                        android:layout_marginTop="0dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/rounded_textview"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:id="@+id/count5" />
+                    <TextView
+                        android:id="@+id/book5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img5"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/darker_gray"
+                        android:text="Turtles way down"
+                        android:textAlignment="center"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/t5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book5"
+                        android:layout_marginLeft="43dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@android:color/darker_gray"
+                        android:text="Price: Rs. "
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:id="@+id/price5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book5"
+                        android:layout_toRightOf="@id/t5"
+                        android:background="@android:color/darker_gray"
+                        android:text="320"
+                        android:textSize="11dp" />
+
+                    <Button
+                        android:id="@+id/dec5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/img5"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/plusminus"
+                        android:onClick="dec5"
+                        android:text="-"
+                        android:textSize="20dp"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/inc5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/img5"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/plusminus"
+                        android:onClick="inc5"
+                        android:text="+"
+                        android:textSize="20dp"
+                        android:textColor="@android:color/darker_gray" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view6"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="8dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray">
+
+                    <ImageView
+                        android:id="@+id/img6"
+                        android:layout_width="150dp"
+                        android:layout_height="145dp"
+                        android:background="@drawable/book6"
+                        android:layout_marginTop="8dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@android:color/white"/>
+                    <TextView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text=""
+                        android:visibility="invisible"
+                        android:textSize="15sp"
+                        android:layout_marginTop="0dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/rounded_textview"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:id="@+id/count6" />
+
+                    <TextView
+                        android:id="@+id/book6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img6"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/darker_gray"
+                        android:text="Native Son"
+                        android:textAlignment="center"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/t6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book6"
+                        android:layout_marginLeft="43dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@android:color/darker_gray"
+                        android:text="Price: Rs. "
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:id="@+id/price6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/book6"
+                        android:layout_toRightOf="@id/t6"
+                        android:background="@android:color/darker_gray"
+                        android:text="300"
+                        android:textSize="11dp" />
+
+                    <Button
+                        android:id="@+id/dec6"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/img6"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/plusminus"
+                        android:onClick="dec6"
+                        android:text="-"
+                        android:textSize="20dp"
+                        android:textColor="@android:color/darker_gray"
+
+                        />
+
+                    <Button
+                        android:id="@+id/inc6"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/img6"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/plusminus"
+                        android:onClick="inc6"
+                        android:text="+"
+                        android:textSize="20dp"
+                        android:textColor="@android:color/darker_gray" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </GridLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/grid"
+            android:layout_marginHorizontal="30dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="4dp"
+
+
+            app:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center">
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20dp"
+                    android:text="TOTAL : "/>
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/total"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</ScrollView>
